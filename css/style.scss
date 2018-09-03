@@ -1,0 +1,119 @@
+@charset "utf-8";
+@import "compass";
+
+
+
+//base
+$baseFontFamily :"游ゴシック",
+YuGothic,
+"メイリオ",
+Verdana,
+"Hiragino Kaku Gothic ProN",
+Meiryo,
+sans-serif;
+$baseColor: #e7e7e7;
+$subColor: #b7bab9;
+$keyColor: #ffoo33;
+$fontColor: #353535;
+html {
+    font-size: 62.5%;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+//header
+.header-diet {
+    background-image: url("../images/diet.jpg");
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+}
+
+@media (max-width: 768px) {
+    .header-diet {
+        background-image: url("../images/diet.jpg");
+        width: 100%;
+        background-size: cover;
+        height: 250px;
+        background-position: center center;
+    }
+}
+
+//main
+.main {
+    background-color: $baseColor;
+    text-align: center;
+    h1 {
+        font-size: 32px;
+        padding: 30px;
+    }
+    .boxes {
+        padding-bottom: 30px;
+        .container {
+            padding: 10px;
+            float: left;
+            box-sizing: border-box;
+            padding: 10px 10px;
+            width: 33%;
+            .box {
+                border: 2px solid $subColor;
+                background-color: white;
+
+                .box-title {
+                    font-size: 16px;
+                    padding-top: 20px;
+                }
+                .box-text {
+                    font-size: 10px;
+                    padding: 10px 20px 30px 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+
+        .boxes {
+            .container {
+                float: none;
+                width: 100%;
+
+            }
+        }
+    }
+
+
+
+
+}
+
+
+
+//footer
+footer {
+    background-color: gray;
+    text-align: center;
+    height: 100px;
+    padding: 15px;
+    .footer-text {
+        font-size: 15px;
+        padding: 10px 10px;
+    }
+    .btn {
+        display: inline-block;
+        padding: 10px;
+        font-size: 10px;
+        width: 80px;
+        height: 15px;
+        background-color: white;
+        border-radius: 4px;
+        border: 3px solid white;
+    }
+}
